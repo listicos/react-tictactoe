@@ -3,7 +3,7 @@ import React from 'react'
 import Board from 'Board'
 
 describe('Test all the moves', () => {
-	let defaultPlayer = 1
+	let humanPlayer = 1 //Playing with X
 	let totalGames = 0
 	let totalGamesWon = 0
 
@@ -13,17 +13,17 @@ describe('Test all the moves', () => {
 		if (board.end()){
 			totalGames++
 			let winner = ai.winner()
-			if (winner === ai.nextPlayer(defaultPlayer)){
+			if (winner === ai.nextPlayer(humanPlayer)){
 				totalGamesWon++
 			}
-			expect(winner).not.toBe(defaultPlayer)
+			expect(winner).not.toBe(humanPlayer)
 			return
 		}
 
 		for (let i = 0; i < 3; i++) {
 			for (let j = 0; j < 3; j++) {
 				if (board.grid[i][j] == 0) {
-					if (player === defaultPlayer){
+					if (player === humanPlayer){
 						board.grid[i][j] = player
 						play(board, ai.nextPlayer(player))
 						board.grid[i][j] = 0
@@ -40,12 +40,8 @@ describe('Test all the moves', () => {
 
 	it('AI test', () => {
 		let board = new Board()
-		//Test playing with X
-		play(board, defaultPlayer)
-		
-		//Test playing with O, this step is not necessary
-		defaultPlayer = 2
-		play(board, defaultPlayer)
+
+		play(board, humanPlayer)
 
 		console.log('Total games:'+totalGames)
 		console.log('Total won:'+totalGamesWon)
