@@ -43,8 +43,8 @@ describe('Test all the moves', () => {
 		//Test playing with X
 		play(board, defaultPlayer)
 		
+		//Test playing with O, this step is not necessary
 		defaultPlayer = 2
-		//Test playing with O
 		play(board, defaultPlayer)
 
 		console.log('Total games:'+totalGames)
