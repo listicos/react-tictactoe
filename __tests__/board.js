@@ -40,11 +40,11 @@ describe('Test all the moves', () => {
 
 	it('AI test', () => {
 		let board = new Board()
-		//Testing playing with X
+		//Test playing with X
 		play(board, defaultPlayer)
 		
 		defaultPlayer = 2
-		//Testing playing with O
+		//Test playing with O
 		play(board, defaultPlayer)
 
 		console.log('Total games:'+totalGames)
