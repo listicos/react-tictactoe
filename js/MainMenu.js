@@ -68,11 +68,6 @@ var MainMenu = React.createClass({
         start={[0.7, 0.5]} end={[1, 1]}
         colors={CatToeColors.primary.background}
         style={styles.container}>
-        <StatusBar
-          translucent={false}
-          backgroundColor="rgba(0, 0, 0, 0.2)"
-          barStyle="light-content"
-         />
         <View style={styles.titleContainer}>
           <Text style={styles.title}>TIC TAC TOE</Text>
         </View>

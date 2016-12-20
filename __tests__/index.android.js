@@ -1,12 +1,10 @@
-import 'react-native';
-import React from 'react';
-import Index from '../index.android.js';
+import 'react-native'
+import React from 'react'
+import CatToeApp from 'CatToeApp'
+import renderer from 'react-test-renderer'
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
-
-it('renders correctly', () => {
+it('Renders correctly', () => {
   const tree = renderer.create(
-    <Index />
-  );
-});
+    <CatToeApp />
+  )
+})
